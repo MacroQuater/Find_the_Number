@@ -1,0 +1,56 @@
+'''Guess the number, between 0-100 '''
+
+number = [0,1,2,3,4,5,6,7,8,9,10,11,12,\
+        13,14,15,16,17,18,19,20,21,22,\
+        23,24,25,26,27,28,29,30,31,32,\
+        33,34,35,36,37,38,39,40,41,42,\
+        43,44,45,46,47,48,49,50,51,52,\
+        53,54,55,56,57,58,59,60,61,62,\
+        63,64,65,66,67,68,69,70,71,72,\
+        73,74,75,76,77,78,79,80,81,82,\
+        83,84,85,86,87,88,89,90,91,92,\
+        93,94,95,96,97,98,99,100]
+
+    
+def random():
+    import random
+    return random.choice(number)
+# def only_1():
+#     one_list = [] 
+#     a = random()
+#     one_list[0] = [] + a
+#     string = ""
+#     for item in one_list:
+#         string += str(item)
+#     return string
+
+def user_input():
+    user_input_value = int(input("Guess the number between 0-100:"))
+    return user_input_value
+
+def checker(stored_number,user_number):
+    if stored_number > user_number:
+        return f"{user_number} is lower then the value."
+    
+    elif stored_number < user_number:
+        return f"{user_number} is higher then the value. "
+
+    elif stored_number == user_number:
+        return "spot on"
+    else:
+        return "None"
+    
+def calc_chance_num():
+    a = random()
+    for c in range(10):
+        b = user_input()
+        print(checker(a,b))
+    print("The program has ended")
+calc_chance_num()
+
+
+# def main():
+#     p = calc_chance_num()
+#     l = random()
+#     checker(int(l),int(p))
+# main()
