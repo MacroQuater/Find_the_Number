@@ -11,18 +11,9 @@ number = [0,1,2,3,4,5,6,7,8,9,10,11,12,\
         83,84,85,86,87,88,89,90,91,92,\
         93,94,95,96,97,98,99,100]
 
-    
 def random():
     import random
     return random.choice(number)
-# def only_1():
-#     one_list = [] 
-#     a = random()
-#     one_list[0] = [] + a
-#     string = ""
-#     for item in one_list:
-#         string += str(item)
-#     return string
 
 def user_input():
     user_input_value = int(input("Guess the number between 0-100:"))
@@ -40,17 +31,10 @@ def checker(stored_number,user_number):
     else:
         return "None"
     
-def calc_chance_num():
+def main():
     a = random()
     for c in range(10):
         b = user_input()
         print(checker(a,b))
     print("The program has ended")
-calc_chance_num()
-
-
-# def main():
-#     p = calc_chance_num()
-#     l = random()
-#     checker(int(l),int(p))
-# main()
+main()
